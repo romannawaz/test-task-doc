@@ -1,0 +1,6 @@
+<app-header (scaleEvent)="getScale($event)"></app-header>
+<app-main>
+  <div [ngStyle]="{ transform: 'scale(' + scale + ')' }">
+    <ng-content></ng-content>
+  </div>
+</app-main>

@@ -1,0 +1,12 @@
+<div class="logo">Test Doc</div>
+<div class="actions">
+  <span class="value">{{ scale }}</span>
+
+  <button class="action" (click)="increase()" [disabled]="this.scale === 100">
+    +
+  </button>
+  <button class="action" (click)="decrease()" [disabled]="this.scale === 0">
+    -
+  </button>
+  <button class="action" (click)="showData()">Save</button>
+</div>

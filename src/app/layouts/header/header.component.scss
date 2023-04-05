@@ -1,0 +1,23 @@
+:host {
+  height: 80px;
+  width: 100%;
+
+  padding: 0 30px;
+
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: aqua;
+
+  position: fixed;
+  z-index: 1;
+
+  .actions {
+    .action {
+      height: 25px;
+      min-width: 25px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="main" [ngClass]="{ done: isDone }">
+  <ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="'text'">
+      <input
+        *ngIf="!isDone"
+        type="text"
+        (blur)="save()"
+        [formControl]="textInput"
+      />
+      <span *ngIf="isDone">{{ textInput.value }}</span>
+    </div>
+    <div *ngSwitchCase="'image'">
+      <input
+        *ngIf="!isDone"
+        type="file"
+        [formControl]="imageInput"
+        (change)="readUrl($event)"
+      />
+
+      <img [src]="url" class="image" />
+    </div>
+    <div *ngSwitchDefault>
+      <button (click)="type = 'text'">Text</button>
+      <button (click)="type = 'image'">Image</button>
+    </div>
+  </ng-container>
+</div>
+
+<button (click)="destroy($event)" class="close_button">+</button>

@@ -1,0 +1,36 @@
+.main {
+  padding: 5px;
+  background-color: bisque;
+  border-radius: 5px;
+  border: 1px solid black;
+
+  &.done {
+    background-color: rgba(255, 228, 196, 0.5);
+  }
+}
+
+.close_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+  border: none;
+
+  background-color: black;
+  color: #fff;
+
+  transform: rotate(45deg);
+  font-size: 22px;
+
+  position: absolute;
+  left: -20px;
+  top: -17px;
+}
+
+.image {
+  max-width: 300px;
+}

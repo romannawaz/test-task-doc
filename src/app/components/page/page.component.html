@@ -1,0 +1,10 @@
+<div>Page number: {{ pageNumber }}</div>
+<ng-content></ng-content>
+
+<div *ngFor="let item of data">
+  <app-insert-content
+    (remove)="filter($event)"
+    (onDragEnd)="updateCoords($event)"
+    [item]="item"
+  ></app-insert-content>
+</div>
